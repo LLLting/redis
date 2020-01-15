@@ -19,7 +19,7 @@ public class RedisController {
     public Object category(){
 
         //多线程测试一下缓存穿透问题
-        ExecutorService executorService = Executors.newFixedThreadPool(8);
+        ExecutorService executorService = Executors.newFixedThreadPool(6);
 
         for (int i = 0; i <10000 ; i++) {
             executorService.submit(new Runnable() {
